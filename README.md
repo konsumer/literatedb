@@ -58,6 +58,6 @@ This isn't at all complete. I still need to do this stuff:
 * [ ] write actual migration code
 * [ ] sqldef support for all any-db database types (add sqlite & mssql)
 * [ ] unit-tests that use sqlite in `::memory::`
-* [ ] optional unit-tests that test every database type
+* [ ] optional integration-tests that test every database type
 * [ ] fix `npm audit` issue with braces
 * [ ] write a blog post
