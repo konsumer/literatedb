@@ -15,7 +15,7 @@ npm i literatedb
 This library is a wrapper around [any-db](https://www.npmjs.com/package/any-db) and [sqldef](https://www.npmjs.com/package/sqldef). You can find a bit more info on each of their pages.
 
 ```js
-import LiterateDb from 'literatedb'
+import { LiterateDb } from 'literatedb'
 
 // setup a database
 const db = new LiterateDb('postgresql://user:secret@localhost')

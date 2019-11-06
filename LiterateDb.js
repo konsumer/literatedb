@@ -3,7 +3,7 @@ import begin from 'any-db-transaction'
 import { promisify } from 'util'
 import sqldef from 'sqldef'
 
-class LiterateDb {
+export class LiterateDb {
   constructor (uri) {
     this.uri = uri
     this.connection = anyDB.createConnection(uri)
