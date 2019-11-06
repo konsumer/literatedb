@@ -1,0 +1,17 @@
+version: '3'
+services:
+  test-runner:
+    build: ./
+    depends_on:
+      - mssql
+      - mysql
+      - postgres
+  
+  mssql:
+    image: microsoft-mssql-server
+  
+  mysql:
+    image: mysql
+  
+  postgres:
+    image: postgres
