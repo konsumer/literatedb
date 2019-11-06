@@ -1,0 +1,46 @@
+{
+  "name": "literatedb",
+  "version": "0.0.0",
+  "description": "A simple database library that supports transactions, promises and migration.",
+  "source": "LiterateDb.js",
+  "main": "build/literatedb.js",
+  "module": "build/literatedb.mjs",
+  "unpkg": "build/literatedb.umd.js",
+  "dependencies": {
+    "any-db": "^2.2.1",
+    "any-db-transaction": "^2.2.2",
+    "sqldef": "^0.0.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/literatedb.git"
+  },
+  "keywords": [
+    "sql",
+    "postgres",
+    "mysql",
+    "simple",
+    "migration"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konsumer/literatedb/issues"
+  },
+  "homepage": "https://github.com/konsumer/literatedb#readme",
+  "files": [
+    "build/literatedb.js",
+    "build/literatedb.mjs",
+    "build/literatedb.umd.js",
+    "build/literatedb.js.map",
+    "build/literatedb.mjs.map",
+    "build/literatedb.umd.js.map"
+  ]
+}
