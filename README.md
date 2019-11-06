@@ -40,6 +40,7 @@ const run = async () => {
   const tx = db.begin()
   tx.on('error', () => tx.rollback())
   await tx.query('INSERT INTO users (email, firstname, lastname) VALUES (?, ?, ?)', ['konsumer@jetboystudio.com', 'David', 'Konsumer'])
+  await tx.query('INSERT INTO users (email, firstname, lastname) VALUES (?, ?, ?)', ['test@test.com', 'Test', 'User'])
   tx.commit()
 }
 run()
