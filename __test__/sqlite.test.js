@@ -20,5 +20,7 @@ describe('literatedb: sqlite', () => {
 
   it('should support SELECTs', async () => {})
 
+  it('should support DELETEs', async () => {})
+
   it('should support transactions', async () => {})
 })
