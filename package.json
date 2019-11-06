@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "microbundle",
-    "test": "npm run build && jest --testMatch=__test__/nodb.test.js",
+    "test": "npm run build && jest --testMatch=__test__/sqlite.test.js",
     "test:all": "npm run build && jest "
   },
   "repository": {
