@@ -50,7 +50,7 @@ run()
 
 ## testing
 
-There are 2 sets of test, using fast in-memory sqlite for local tests that check basic functionality of library, and docker-based integration tests that check all the database-types.
+There are 2 sets of tests, using fast in-memory sqlite for local tests that check basic functionality of library, and docker-based integration tests that check all the database-types.
 
 ```bash
 # just check local stuff
@@ -59,6 +59,8 @@ npm test
 # check everything
 npm run test:all
 ```
+
+You probly won't need these unless you are working on features for literatedb.
 
 
 ## TODO
