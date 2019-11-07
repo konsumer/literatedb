@@ -26,9 +26,6 @@ const db = new LiterateDb()
 // you can also use a pool
 const db = new LiterateDb('postgresql://user:secret@localhost', { min: 2, max: 20 })
 
-// ...later
-db.close()
-
 const run = async () => {
   // migrate the database from a simple SQL file that describes your database
   await db.migrate(`${__dirname}/schema.sql`)
@@ -42,6 +39,10 @@ const run = async () => {
   await tx.query('INSERT INTO users (email, firstname, lastname) VALUES (?, ?, ?)', ['konsumer@jetboystudio.com', 'David', 'Konsumer'])
   await tx.query('INSERT INTO users (email, firstname, lastname) VALUES (?, ?, ?)', ['test@test.com', 'Test', 'User'])
   tx.commit()
+  
+  // release the db/pool
+  // do this when you exit
+  db.close()
 }
 run()
 
