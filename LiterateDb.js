@@ -9,6 +9,7 @@ export class LiterateDb {
     this.connection = anyDB.createConnection(uri)
     this.query = promisify(this.connection.query)
     this.queryStream = this.connection.query
+    this.type = uri.split(':')[0]
   }
 
   // start a transaction, return a promisable & streamable object
