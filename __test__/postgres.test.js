@@ -6,7 +6,7 @@ const { LiterateDb } = require('../dist/build/literatedb.js')
 
 let db
 
-describe('literatedb: postgres', () => {
+describe('postgres', () => {
   it('should be able to make a new postgres database', () => {
     db = new LiterateDb('postgres://root:root@postgres/test')
   })

@@ -7,7 +7,7 @@ const { LiterateDb } = require('../dist/build/literatedb.js')
 
 let db
 
-describe('literatedb: sqlite', () => {
+describe('sqlite', () => {
   it('should be able to make a new sqlite database', () => {
     db = new LiterateDb('sqlite://:memory:')
   })

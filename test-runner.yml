@@ -9,9 +9,20 @@ services:
   
   mssql:
     image: microsoft-mssql-server
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: N0tArealDatabase
+
   
   mysql:
     image: mysql
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: root
   
   postgres:
     image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test

@@ -6,9 +6,12 @@ const { LiterateDb } = require('../dist/build/literatedb.js')
 
 let db
 
-describe('literatedb: mssql', () => {
-  it('should be able to make a new mssql database', () => {
-    db = new LiterateDb('mssql://root:root@mssql/test')
+describe('mssql', () => {
+  it('should be able to make a new mssql database', async () => {
+    db = new LiterateDb('mssql://sa:N0tArealDatabase@mssql')
+    // TODO: create test database?
+    // await db.query('CREATE DATABASE test')
+    // await db.query('USE test')
   })
 
   it('should support migration', () => {})

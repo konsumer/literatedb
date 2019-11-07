@@ -6,7 +6,7 @@ const { LiterateDb } = require('../dist/build/literatedb.js')
 
 let db
 
-describe('literatedb: mysql', () => {
+describe('mysql', () => {
   it('should be able to make a new mysql database', () => {
     db = new LiterateDb('mysql://root:root@mysql/test')
   })
