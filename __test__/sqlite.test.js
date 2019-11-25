@@ -1,7 +1,7 @@
 // this has tests that use a real sqlite database
 // This is the only unit-test that doesn't require a real database
 
-/* global describe, it */
+/* global describe, it, expect */
 
 const { LiterateDb } = require('../dist/build/literatedb.js')
 
@@ -12,7 +12,10 @@ describe('sqlite', () => {
     db = new LiterateDb('sqlite://:memory:')
   })
 
-  it('should support migration', () => {})
+  it('should support migration', async () => {
+    await db.migrate(`${__dirname}/schema.sql`)
+    expect(await db.schema).toMatchSnapshot()
+  })
 
   it('should support INSERTs', async () => {})
 
